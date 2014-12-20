@@ -1,0 +1,6 @@
+[submodule "AwesomeRent/-f"]
+	path = AwesomeRent/-f
+	url = https://github.com/Alamofire/Alamofire.git
+[submodule "AwesomeRent/Alamofire"]
+	path = AwesomeRent/Alamofire
+	url = https://github.com/Alamofire/Alamofire.git
