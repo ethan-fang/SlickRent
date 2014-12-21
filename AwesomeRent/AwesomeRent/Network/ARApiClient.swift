@@ -27,11 +27,16 @@ public class ARApiClient: NSObject {
         baseURL = "http://ec2-54-173-114-114.compute-1.amazonaws.com:8080"
     }
     
-    public func login(username:String, password:String) {
-        Alamofire.request(UserRouter.LoginUser(username, password)).responseJSON { (request, response, JSON, error) in
-            println(JSON)
-            println(error)
-            println(request)
+    public func login(username:String, password:String, handleSuccess:(Dictionary<String, AnyObject>)->Void, handleFailure:(String?)->Void) {
+        Alamofire.request(UserRouter.LoginUser(username, password)).responseJSON {(request, response, JSON, error) in
+            if let jsonResult = JSON as? Dictionary<String, AnyObject> {
+                println(JSON)
+                if (jsonResult["error"] != nil) {
+                    handleFailure(jsonResult["error"] as? String)
+                } else {
+                    handleSuccess(jsonResult)
+                }
+            }
         }
     }
     

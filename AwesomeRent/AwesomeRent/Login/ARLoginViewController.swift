@@ -28,7 +28,13 @@ class ARLoginViewController: UIViewController {
     @IBAction func onPressLogIn(sender: UIButton) {
         println("Login \(self.emailTextField.text)");
         
-        ARApiClient.sharedInstance.login(emailTextField.text, password:passwordTextField.text)
+        ARLoginService.login(emailTextField.text, password: passwordTextField.text, handleSuccess: { () -> Void in
+            let profileVC = ARProfileViewController(nibName: "ARProfileViewController", bundle: nil)
+            let navigationVC = UINavigationController(rootViewController: profileVC)
+            self.presentViewController(navigationVC, animated: true, completion: nil)
+        }, handleFailure: { (errorString) -> Void in
+            ARAlertUtils.showAlert("login fails", message: errorString!)
+        })
     }
     
     
