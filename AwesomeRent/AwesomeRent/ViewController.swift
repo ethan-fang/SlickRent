@@ -17,10 +17,6 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         var loginVC = ARLoginViewController(nibName: "ARLoginViewController", bundle: nil)
         self.presentViewController(loginVC, animated: true, completion: nil)
-        
-//        var storyboard : UIStoryboard = UIStoryboard(name: "Test", bundle: nil)
-//        var vc : UIViewController = storyboard.instantiateViewControllerWithIdentifier("Main") as UIViewController
-//        self.presentViewController(vc, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {

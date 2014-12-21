@@ -10,10 +10,6 @@
 		FB1E143D1A3E262200DEA1AC /* ARApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1E143C1A3E262200DEA1AC /* ARApiClient.swift */; };
 		FB1E143F1A3E271300DEA1AC /* ARNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1E143E1A3E271300DEA1AC /* ARNetworkClient.swift */; };
 		FB1E14421A3EA16900DEA1AC /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1E14411A3EA16900DEA1AC /* UserRouter.swift */; };
-		FB9771AC1A42A63A00A5EC43 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9771A81A42A63A00A5EC43 /* FirstViewController.swift */; };
-		FB9771AD1A42A63A00A5EC43 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB9771A91A42A63A00A5EC43 /* Test.storyboard */; };
-		FB9771AE1A42A63A00A5EC43 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9771AA1A42A63A00A5EC43 /* SecondViewController.swift */; };
-		FB9771AF1A42A63A00A5EC43 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9771AB1A42A63A00A5EC43 /* TaskManager.swift */; };
 		FBCCD9E41A46561F00CCD111 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = FBCCD9E11A46561400CCD111 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FBCCD9E81A465C3E00CCD111 /* ARAlertUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCCD9E71A465C3E00CCD111 /* ARAlertUtils.swift */; };
 		FBCCD9EB1A465E7700CCD111 /* ARUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCCD9EA1A465E7700CCD111 /* ARUserManager.swift */; };
@@ -81,10 +77,6 @@
 		FB1E143C1A3E262200DEA1AC /* ARApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARApiClient.swift; sourceTree = "<group>"; };
 		FB1E143E1A3E271300DEA1AC /* ARNetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARNetworkClient.swift; sourceTree = "<group>"; };
 		FB1E14411A3EA16900DEA1AC /* UserRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
-		FB9771A81A42A63A00A5EC43 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		FB9771A91A42A63A00A5EC43 /* Test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
-		FB9771AA1A42A63A00A5EC43 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		FB9771AB1A42A63A00A5EC43 /* TaskManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		FBCCD9DB1A46561400CCD111 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		FBCCD9E71A465C3E00CCD111 /* ARAlertUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAlertUtils.swift; sourceTree = "<group>"; };
 		FBCCD9EA1A465E7700CCD111 /* ARUserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARUserManager.swift; sourceTree = "<group>"; };
@@ -151,17 +143,6 @@
 			path = Routers;
 			sourceTree = "<group>";
 		};
-		FB9771A71A42A63A00A5EC43 /* Test */ = {
-			isa = PBXGroup;
-			children = (
-				FB9771A81A42A63A00A5EC43 /* FirstViewController.swift */,
-				FB9771A91A42A63A00A5EC43 /* Test.storyboard */,
-				FB9771AA1A42A63A00A5EC43 /* SecondViewController.swift */,
-				FB9771AB1A42A63A00A5EC43 /* TaskManager.swift */,
-			);
-			path = Test;
-			sourceTree = "<group>";
-		};
 		FBCCD9DC1A46561400CCD111 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,7 +194,6 @@
 			children = (
 				FBCCD9F61A46756800CCD111 /* Profile */,
 				FBCCD9E91A465E6B00CCD111 /* Managers */,
-				FB9771A71A42A63A00A5EC43 /* Test */,
 				FB1E143B1A3E0B9C00DEA1AC /* Utils */,
 				FB1E143A1A3E0B1D00DEA1AC /* Network */,
 				FBD2EDB61A3D0B3700607FBC /* Login */,
@@ -369,7 +349,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBD2ED9C1A3D0A3900607FBC /* Main.storyboard in Resources */,
-				FB9771AD1A42A63A00A5EC43 /* Test.storyboard in Resources */,
 				FBD2EDB81A3D0CEF00607FBC /* ARLoginViewController.xib in Resources */,
 				FBCCD9FA1A46756800CCD111 /* ARProfileViewController.xib in Resources */,
 				FBD2EDA11A3D0A3900607FBC /* LaunchScreen.xib in Resources */,
@@ -394,11 +373,8 @@
 				FBD2ED991A3D0A3900607FBC /* ViewController.swift in Sources */,
 				FBCCD9F91A46756800CCD111 /* ARProfileViewController.swift in Sources */,
 				FB1E143D1A3E262200DEA1AC /* ARApiClient.swift in Sources */,
-				FB9771AF1A42A63A00A5EC43 /* TaskManager.swift in Sources */,
 				FBD2EDBA1A3D0D0200607FBC /* ARLoginViewController.swift in Sources */,
-				FB9771AE1A42A63A00A5EC43 /* SecondViewController.swift in Sources */,
 				FBCCD9FC1A467AA100CCD111 /* ARUserInfo.swift in Sources */,
-				FB9771AC1A42A63A00A5EC43 /* FirstViewController.swift in Sources */,
 				FBCCD9EB1A465E7700CCD111 /* ARUserManager.swift in Sources */,
 				FBCCD9E81A465C3E00CCD111 /* ARAlertUtils.swift in Sources */,
 				FBD2ED971A3D0A3900607FBC /* AwesomeRent.xcdatamodeld in Sources */,
