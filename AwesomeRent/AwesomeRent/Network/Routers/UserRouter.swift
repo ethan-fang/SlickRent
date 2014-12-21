@@ -29,15 +29,6 @@ enum UserRouter: URLRequestConvertible {
             return .POST
         case .LoginUser:
             return .POST
-            
-        case .CreateUser:
-            return .POST
-        case .ReadUser:
-            return .GET
-        case .UpdateUser:
-            return .PUT
-        case .DestroyUser:
-            return .DELETE
         default:
             return .GET
         }
@@ -49,15 +40,6 @@ enum UserRouter: URLRequestConvertible {
             return "/user/signup"
         case .LoginUser:
             return "/user/signin"
-            
-        case .CreateUser:
-            return "/users"
-        case .ReadUser(let username):
-            return "/users/\(username)"
-        case .UpdateUser(let username, _):
-            return "/users/\(username)"
-        case .DestroyUser(let username):
-            return "/users/\(username)"
         default:
             return ""
         }
@@ -83,11 +65,6 @@ enum UserRouter: URLRequestConvertible {
         case .LoginUser(let username, let password):
             let parameters = ["username": username, "password": password]
             return Alamofire.ParameterEncoding.JSON.encode(mutableURLRequest, parameters: parameters).0
-            
-        case .CreateUser(let parameters):
-            return Alamofire.ParameterEncoding.JSON.encode(mutableURLRequest, parameters: parameters).0
-        case .UpdateUser(_, let parameters):
-            return Alamofire.ParameterEncoding.URL.encode(mutableURLRequest, parameters: parameters).0
         default:
             return mutableURLRequest
         }
