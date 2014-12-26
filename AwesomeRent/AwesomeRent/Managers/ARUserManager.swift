@@ -23,6 +23,11 @@ enum ARUserManager {
         userDefaults.synchronize()
     }
     
+    static func isUserAuthenticated() -> Bool {
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        return userDefaults.valueForKey(ARUserManager.kUserName)?.length > 0
+    }
+    
     static func username() -> String {
         return NSUserDefaults.standardUserDefaults().valueForKey(ARUserManager.kUserName) as String
     }

@@ -39,7 +39,9 @@ class ARLoginViewController: UIViewController {
     
     
     @IBAction func onPressSignUp(sender: UIButton) {
-        println("Sign up");
+        var signupVC = ARSignupViewController(nibName: "ARSignupViewController", bundle: nil)
+        let navigationVC = UINavigationController(rootViewController: signupVC)
+        self.presentViewController(navigationVC, animated: true, completion: nil)
     }
 
     

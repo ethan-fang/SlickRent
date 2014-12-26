@@ -18,6 +18,7 @@ class ARProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupUploadButton()
         self.setupCancenButton()
 
         userNameLabel.text = ARUserManager.username()
@@ -29,6 +30,16 @@ class ARProfileViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func setupUploadButton() {
+        let uploadButton = UIBarButtonItem(title: "upload", style: .Plain, target: self, action: "onPressUploadButton:")
+        self.navigationItem.leftBarButtonItem = uploadButton
+    }
+    
+    func onPressUploadButton(sender: UIBarButtonItem) {
+        let uploadItemVC = ARUploadItemViewController(nibName: "ARUploadItemViewController", bundle: nil)
+        self.presentViewController(uploadItemVC, animated: true, completion: nil)
     }
     
     func setupCancenButton() {

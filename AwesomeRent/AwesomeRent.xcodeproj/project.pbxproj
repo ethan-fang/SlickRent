@@ -10,6 +10,15 @@
 		FB1E143D1A3E262200DEA1AC /* ARApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1E143C1A3E262200DEA1AC /* ARApiClient.swift */; };
 		FB1E143F1A3E271300DEA1AC /* ARNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1E143E1A3E271300DEA1AC /* ARNetworkClient.swift */; };
 		FB1E14421A3EA16900DEA1AC /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1E14411A3EA16900DEA1AC /* UserRouter.swift */; };
+		FB4909251A4B86D000C1AE2B /* ARSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4909231A4B86D000C1AE2B /* ARSignupViewController.swift */; };
+		FB4909261A4B86D000C1AE2B /* ARSignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB4909241A4B86D000C1AE2B /* ARSignupViewController.xib */; };
+		FB4909281A4B87DE00C1AE2B /* ARSignupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4909271A4B87DE00C1AE2B /* ARSignupService.swift */; };
+		FB49092C1A4B9BDA00C1AE2B /* ARUploadItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB49092A1A4B9BDA00C1AE2B /* ARUploadItemViewController.swift */; };
+		FB49092D1A4B9BDA00C1AE2B /* ARUploadItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB49092B1A4B9BDA00C1AE2B /* ARUploadItemViewController.xib */; };
+		FB4909301A4BA32400C1AE2B /* ARUploadImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB49092E1A4BA32400C1AE2B /* ARUploadImageViewController.swift */; };
+		FB4909311A4BA32400C1AE2B /* ARUploadImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB49092F1A4BA32400C1AE2B /* ARUploadImageViewController.xib */; };
+		FB4909331A4BABF200C1AE2B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4909321A4BABF200C1AE2B /* MobileCoreServices.framework */; };
+		FB4909351A4BB1B400C1AE2B /* ARCameraUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4909341A4BB1B400C1AE2B /* ARCameraUtils.swift */; };
 		FBCCD9E81A465C3E00CCD111 /* ARAlertUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCCD9E71A465C3E00CCD111 /* ARAlertUtils.swift */; };
 		FBCCD9EB1A465E7700CCD111 /* ARUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCCD9EA1A465E7700CCD111 /* ARUserManager.swift */; };
 		FBCCD9F91A46756800CCD111 /* ARProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCCD9F71A46756800CCD111 /* ARProfileViewController.swift */; };
@@ -77,6 +86,15 @@
 		FB1E143C1A3E262200DEA1AC /* ARApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARApiClient.swift; sourceTree = "<group>"; };
 		FB1E143E1A3E271300DEA1AC /* ARNetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARNetworkClient.swift; sourceTree = "<group>"; };
 		FB1E14411A3EA16900DEA1AC /* UserRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
+		FB4909231A4B86D000C1AE2B /* ARSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARSignupViewController.swift; sourceTree = "<group>"; };
+		FB4909241A4B86D000C1AE2B /* ARSignupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARSignupViewController.xib; sourceTree = "<group>"; };
+		FB4909271A4B87DE00C1AE2B /* ARSignupService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARSignupService.swift; sourceTree = "<group>"; };
+		FB49092A1A4B9BDA00C1AE2B /* ARUploadItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARUploadItemViewController.swift; sourceTree = "<group>"; };
+		FB49092B1A4B9BDA00C1AE2B /* ARUploadItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARUploadItemViewController.xib; sourceTree = "<group>"; };
+		FB49092E1A4BA32400C1AE2B /* ARUploadImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARUploadImageViewController.swift; sourceTree = "<group>"; };
+		FB49092F1A4BA32400C1AE2B /* ARUploadImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARUploadImageViewController.xib; sourceTree = "<group>"; };
+		FB4909321A4BABF200C1AE2B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		FB4909341A4BB1B400C1AE2B /* ARCameraUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARCameraUtils.swift; sourceTree = "<group>"; };
 		FBCCD9E71A465C3E00CCD111 /* ARAlertUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAlertUtils.swift; sourceTree = "<group>"; };
 		FBCCD9EA1A465E7700CCD111 /* ARUserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARUserManager.swift; sourceTree = "<group>"; };
 		FBCCD9F71A46756800CCD111 /* ARProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARProfileViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB4909331A4BABF200C1AE2B /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				FBCCD9E71A465C3E00CCD111 /* ARAlertUtils.swift */,
+				FB4909341A4BB1B400C1AE2B /* ARCameraUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -141,6 +161,27 @@
 				FB1E14411A3EA16900DEA1AC /* UserRouter.swift */,
 			);
 			path = Routers;
+			sourceTree = "<group>";
+		};
+		FB4909221A4B86BD00C1AE2B /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				FB4909231A4B86D000C1AE2B /* ARSignupViewController.swift */,
+				FB4909241A4B86D000C1AE2B /* ARSignupViewController.xib */,
+				FB4909271A4B87DE00C1AE2B /* ARSignupService.swift */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		FB4909291A4B9BC600C1AE2B /* UploadItems */ = {
+			isa = PBXGroup;
+			children = (
+				FB49092A1A4B9BDA00C1AE2B /* ARUploadItemViewController.swift */,
+				FB49092B1A4B9BDA00C1AE2B /* ARUploadItemViewController.xib */,
+				FB49092E1A4BA32400C1AE2B /* ARUploadImageViewController.swift */,
+				FB49092F1A4BA32400C1AE2B /* ARUploadImageViewController.xib */,
+			);
+			path = UploadItems;
 			sourceTree = "<group>";
 		};
 		FBCCD9E91A465E6B00CCD111 /* Managers */ = {
@@ -173,6 +214,7 @@
 		FBD2ED851A3D0A3800607FBC = {
 			isa = PBXGroup;
 			children = (
+				FB4909321A4BABF200C1AE2B /* MobileCoreServices.framework */,
 				FBD2ED901A3D0A3800607FBC /* AwesomeRent */,
 				FBD2EDA91A3D0A3900607FBC /* AwesomeRentTests */,
 				FBD2ED8F1A3D0A3800607FBC /* Products */,
@@ -192,6 +234,8 @@
 		FBD2ED901A3D0A3800607FBC /* AwesomeRent */ = {
 			isa = PBXGroup;
 			children = (
+				FB4909291A4B9BC600C1AE2B /* UploadItems */,
+				FB4909221A4B86BD00C1AE2B /* Signup */,
 				FBCCD9F61A46756800CCD111 /* Profile */,
 				FBCCD9E91A465E6B00CCD111 /* Managers */,
 				FB1E143B1A3E0B9C00DEA1AC /* Utils */,
@@ -294,6 +338,7 @@
 				TargetAttributes = {
 					FBD2ED8D1A3D0A3800607FBC = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 88Z927TPUG;
 					};
 					FBD2EDA51A3D0A3900607FBC = {
 						CreatedOnToolsVersion = 6.1;
@@ -350,9 +395,12 @@
 			files = (
 				FBD2ED9C1A3D0A3900607FBC /* Main.storyboard in Resources */,
 				FBD2EDB81A3D0CEF00607FBC /* ARLoginViewController.xib in Resources */,
+				FB4909311A4BA32400C1AE2B /* ARUploadImageViewController.xib in Resources */,
 				FBCCD9FA1A46756800CCD111 /* ARProfileViewController.xib in Resources */,
 				FBD2EDA11A3D0A3900607FBC /* LaunchScreen.xib in Resources */,
+				FB49092D1A4B9BDA00C1AE2B /* ARUploadItemViewController.xib in Resources */,
 				FBD2ED9E1A3D0A3900607FBC /* Images.xcassets in Resources */,
+				FB4909261A4B86D000C1AE2B /* ARSignupViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +418,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB49092C1A4B9BDA00C1AE2B /* ARUploadItemViewController.swift in Sources */,
 				FBD2ED991A3D0A3900607FBC /* ViewController.swift in Sources */,
+				FB4909301A4BA32400C1AE2B /* ARUploadImageViewController.swift in Sources */,
 				FBCCD9F91A46756800CCD111 /* ARProfileViewController.swift in Sources */,
 				FB1E143D1A3E262200DEA1AC /* ARApiClient.swift in Sources */,
 				FBD2EDBA1A3D0D0200607FBC /* ARLoginViewController.swift in Sources */,
@@ -378,9 +428,12 @@
 				FBCCD9EB1A465E7700CCD111 /* ARUserManager.swift in Sources */,
 				FBCCD9E81A465C3E00CCD111 /* ARAlertUtils.swift in Sources */,
 				FBD2ED971A3D0A3900607FBC /* AwesomeRent.xcdatamodeld in Sources */,
+				FB4909281A4B87DE00C1AE2B /* ARSignupService.swift in Sources */,
+				FB4909251A4B86D000C1AE2B /* ARSignupViewController.swift in Sources */,
 				FBCCD9FE1A467BA700CCD111 /* ARLoginService.swift in Sources */,
 				FB1E14421A3EA16900DEA1AC /* UserRouter.swift in Sources */,
 				FB1E143F1A3E271300DEA1AC /* ARNetworkClient.swift in Sources */,
+				FB4909351A4BB1B400C1AE2B /* ARCameraUtils.swift in Sources */,
 				FBD2ED941A3D0A3800607FBC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,6 +498,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chaoqun Fang (TVMS73EDH9)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -488,6 +542,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chaoqun Fang (TVMS73EDH9)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -511,10 +566,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AwesomeRent/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -522,10 +580,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AwesomeRent/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -20,7 +20,7 @@ enum UserRouter: URLRequestConvertible {
     case DestroyUser(String)
     
     
-    case SignupUser([String: AnyObject])
+    case SignupUser(String, String)
     case LoginUser(String, String)
     
     var method: Alamofire.Method {
@@ -60,7 +60,8 @@ enum UserRouter: URLRequestConvertible {
         mutableURLRequest.HTTPMethod = method.rawValue
         
         switch self {
-        case .SignupUser(let parameters):
+        case .SignupUser(let username, let password):
+            let parameters = ["username": username, "password": password]
             return Alamofire.ParameterEncoding.JSON.encode(mutableURLRequest, parameters: parameters).0
         case .LoginUser(let username, let password):
             let parameters = ["username": username, "password": password]
