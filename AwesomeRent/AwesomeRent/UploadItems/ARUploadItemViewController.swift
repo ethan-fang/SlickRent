@@ -10,6 +10,7 @@ import UIKit
 import MobileCoreServices
 
 class ARUploadItemViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
+    let ImageCellIdentifier = "ImageCell"
     
     @IBOutlet var photoCollectionView: UICollectionView!
     var photos = [UIImage]();
@@ -18,6 +19,8 @@ class ARUploadItemViewController: UIViewController, UIImagePickerControllerDeleg
         super.viewDidLoad()
         photoCollectionView.delegate = self
         photoCollectionView.dataSource = self
+        let columnHeaderViewNIB = UINib(nibName:"ARUploadItemImageCellCollectionViewCell", bundle: nil)
+        photoCollectionView.registerNib(columnHeaderViewNIB, forCellWithReuseIdentifier: ImageCellIdentifier)
         
         if ARCameraUtils.doesCameraSupportTakingPhotos(){
             println("The camera supports taking photos")
@@ -30,6 +33,10 @@ class ARUploadItemViewController: UIViewController, UIImagePickerControllerDeleg
         } else {
             println("The camera does not support shooting videos")
         }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        photoCollectionView.reloadData()
     }
     
     func imagePickerController(picker: UIImagePickerController!,
@@ -102,7 +109,9 @@ class ARUploadItemViewController: UIViewController, UIImagePickerControllerDeleg
         return photos.count
     }
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        
+        let cell = photoCollectionView.dequeueReusableCellWithReuseIdentifier(ImageCellIdentifier, forIndexPath: indexPath) as ARUploadItemImageCellCollectionViewCell
+        cell.setImage(photos[indexPath.row])
+        return cell;
     }
     
     
