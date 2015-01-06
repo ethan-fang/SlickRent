@@ -11,6 +11,7 @@ import MobileCoreServices
 
 class ARUploadItemViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     let ImageCellIdentifier = "ImageCell"
+    var imagePicker = UIImagePickerController()
     
     @IBOutlet var photoCollectionView: UICollectionView!
     var photos = [UIImage]();
@@ -42,49 +43,33 @@ class ARUploadItemViewController: UIViewController, UIImagePickerControllerDeleg
     func imagePickerController(picker: UIImagePickerController!,
         didFinishPickingMediaWithInfo info: [NSObject : AnyObject]!){
             
-            println("Picker returned successfully")
-            
-            let mediaType:AnyObject? = info[UIImagePickerControllerMediaType]
-            
-            if let type:AnyObject = mediaType{
-                
-                if type is String{
-                    let stringType = type as String
-                    
-                    if stringType == kUTTypeMovie as NSString{
-                        let urlOfVideo = info[UIImagePickerControllerMediaURL] as? NSURL
-                        if let url = urlOfVideo{
-                            println("Video URL = \(url)")
-                        }
-                    }
-                        
-                    else if stringType == kUTTypeImage as NSString as NSString{
-                        /* Let's get the metadata. This is only for images. Not videos */
-                        let metadata = info[UIImagePickerControllerMediaMetadata]
-                            as? NSDictionary
-                        if let theMetaData = metadata{
-                            let image = info[UIImagePickerControllerOriginalImage]
-                                as? UIImage
-                            if let theImage = image{
-                                println("Image Metadata = \(theMetaData)")
-                                println("Image = \(theImage)")
-                                photos.append(theImage)
-                            }
-                        }
-                    }
-                    
-                }
-            }
+            let tempImage = info[UIImagePickerControllerOriginalImage] as UIImage
+            photos.append(tempImage)
             
             picker.dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func onPressAddImage(sender: AnyObject) {
-        self.presentCamera()
+        self.presentPhotoLibrary()
     }
     
     @IBAction func onPressDoneButton(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        if (photos.count == 0) {
+            return
+        }
+        let image:UIImage = photos[0]
+        ARUploadImageService.uploadImage(image)
+    }
+    
+    func presentPhotoLibrary() {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.SavedPhotosAlbum){
+            println("Button capture")
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.SavedPhotosAlbum;
+            imagePicker.allowsEditing = false
+            
+            self.presentViewController(imagePicker, animated: true, completion: nil)
+        }
     }
     
     

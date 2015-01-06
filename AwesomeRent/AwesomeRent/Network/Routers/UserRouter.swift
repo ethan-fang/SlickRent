@@ -10,8 +10,7 @@ import UIKit
 import Alamofire
 
 enum UserRouter: URLRequestConvertible {
-    static let baseURLString = "http://ec2-54-173-114-114.compute-1.amazonaws.com:8080"
-    static let clientId = "e7568b2c-2c0f-480e-9e34-08f9a4b807dc"
+
     static var OAuthToken: String?
     
     case CreateUser([String: AnyObject])
@@ -48,11 +47,11 @@ enum UserRouter: URLRequestConvertible {
     //     MARK: URLRequestConvertible
     
     var URLRequest: NSURLRequest {
-        let URL = NSURL(string: UserRouter.baseURLString)!
+        let URL = NSURL(string: RouterConstants.baseURLString)!
         var fullPath = URL.URLByAppendingPathComponent(path)
         
         if let URLComponents = NSURLComponents(URL: fullPath, resolvingAgainstBaseURL: false) {
-            URLComponents.percentEncodedQuery = (URLComponents.percentEncodedQuery != nil ? URLComponents.percentEncodedQuery! + "&" : "") + "clientId=\(UserRouter.clientId)"
+            URLComponents.percentEncodedQuery = (URLComponents.percentEncodedQuery != nil ? URLComponents.percentEncodedQuery! + "&" : "") + "clientId=\(RouterConstants.clientId)"
             fullPath = URLComponents.URL!
         }
         
