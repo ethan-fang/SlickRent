@@ -23,6 +23,15 @@ enum ARUserManager {
         userDefaults.synchronize()
     }
     
+    static func removeUser() {
+        var userDefaults = NSUserDefaults.standardUserDefaults()
+        let userKeys = [ARUserManager.kUserName, ARUserManager.kAccessToken, ARUserManager.kPassword, ARUserManager.kUserId]
+        for key in userKeys {
+            userDefaults.removeObjectForKey(key)
+        }
+        userDefaults.synchronize()
+    }
+    
     static func isUserAuthenticated() -> Bool {
         let userDefaults = NSUserDefaults.standardUserDefaults()
         return userDefaults.valueForKey(ARUserManager.kUserName)?.length > 0

@@ -42,6 +42,12 @@ class ARProfileViewController: UIViewController {
         self.presentViewController(uploadItemVC, animated: true, completion: nil)
     }
     
+    @IBAction func onPressLogoutButton(sender: AnyObject) {
+        ARUserManager.removeUser()
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
     func setupCancenButton() {
         let cancelButton = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: "onPressCancelButton:")
         self.navigationItem.rightBarButtonItem = cancelButton

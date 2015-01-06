@@ -9,7 +9,7 @@
 import UIKit
 import MobileCoreServices
 
-class ARUploadItemViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
+class ARUploadItemViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     let ImageCellIdentifier = "ImageCell"
     
     @IBOutlet var photoCollectionView: UICollectionView!
@@ -83,6 +83,11 @@ class ARUploadItemViewController: UIViewController, UIImagePickerControllerDeleg
         self.presentCamera()
     }
     
+    @IBAction func onPressDoneButton(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
     func presentCamera() {
         if ARCameraUtils.isCameraAvailable() && ARCameraUtils.doesCameraSupportTakingPhotos(){
             
@@ -114,5 +119,7 @@ class ARUploadItemViewController: UIViewController, UIImagePickerControllerDeleg
         return cell;
     }
     
-    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSizeMake(60, 60)
+    }
 }

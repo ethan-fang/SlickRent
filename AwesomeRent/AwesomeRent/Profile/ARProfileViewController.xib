@@ -47,7 +47,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnY-bG-GhB" userLabel="UserId">
-                    <rect key="frame" x="184" y="222" width="214" height="21"/>
+                    <rect key="frame" x="184" y="221" width="214" height="21"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="214" id="25C-h9-XwJ"/>
                     </constraints>
@@ -55,6 +55,15 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v59-Ga-kBg">
+                    <rect key="frame" x="277" y="273" width="49" height="30"/>
+                    <state key="normal" title="Logout">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onPressLogoutButton:" destination="-1" eventType="touchUpInside" id="0og-J6-lQJ"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -67,7 +76,9 @@
                 <constraint firstItem="YHB-5C-8YN" firstAttribute="top" secondItem="L0K-gn-5It" secondAttribute="bottom" constant="32" id="ZTp-fW-4Fa"/>
                 <constraint firstItem="L0K-gn-5It" firstAttribute="trailing" secondItem="YHB-5C-8YN" secondAttribute="trailing" id="aqp-5T-l8u"/>
                 <constraint firstItem="wnY-bG-GhB" firstAttribute="leading" secondItem="vEO-IL-UXA" secondAttribute="leading" id="cDD-YW-EJq"/>
+                <constraint firstAttribute="centerX" secondItem="v59-Ga-kBg" secondAttribute="centerX" constant="-1.5" id="iMo-lq-wNS"/>
                 <constraint firstItem="vEO-IL-UXA" firstAttribute="trailing" secondItem="YHB-5C-8YN" secondAttribute="trailing" id="j1l-Ft-EMa"/>
+                <constraint firstItem="v59-Ga-kBg" firstAttribute="top" secondItem="wnY-bG-GhB" secondAttribute="bottom" constant="31" id="wPb-wN-0aE"/>
                 <constraint firstItem="L0K-gn-5It" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="62" id="y9y-aA-hgN"/>
             </constraints>
             <point key="canvasLocation" x="397" y="403"/>
