@@ -56,7 +56,7 @@ public enum ImageRouter:URLRequestConvertible {
             
             let boundaryConstant = "myRandomBoundary12345";
             let contentType = "multipart/form-data;boundary="+boundaryConstant
-            mutableURLRequest.setValue(contentType, forHTTPHeaderField: "Content-Type")
+            mutableURLRequest.setValue(contentType, forHTTPHeaderField:"Content-Type")
             
             
             // return URLRequestConvertible and NSData
