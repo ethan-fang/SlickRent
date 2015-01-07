@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="OpenSans-Light.ttf">
+            <string>OpenSans-Light</string>
+        </mutableArray>
+        <mutableArray key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ARUploadItemAttributeListItemCell" customModule="AwesomeRent" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="416" height="76"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="416" height="76"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check_mark_0.png" translatesAutoresizingMaskIntoConstraints="NO" id="h5H-40-ZoU">
+                        <rect key="frame" x="15" y="26" width="23" height="23"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="23" id="Gg6-9i-fOp"/>
+                            <constraint firstAttribute="width" constant="23" id="hAR-wI-gn5"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="253" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33r-jA-fO7">
+                        <rect key="frame" x="53" y="15" width="320" height="24"/>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="collection-disclosure.png" translatesAutoresizingMaskIntoConstraints="NO" id="e4z-3U-gbx">
+                        <rect key="frame" x="388" y="31" width="13" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="1Dz-vw-usV"/>
+                            <constraint firstAttribute="width" constant="13" id="nY3-2r-Yvj"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQm-Sl-cl2">
+                        <rect key="frame" x="53" y="40" width="320" height="21"/>
+                        <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="15"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="33r-jA-fO7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="1ub-HG-hDD"/>
+                <constraint firstItem="e4z-3U-gbx" firstAttribute="leading" secondItem="33r-jA-fO7" secondAttribute="trailing" constant="15" id="2g4-es-d6N"/>
+                <constraint firstAttribute="centerY" secondItem="e4z-3U-gbx" secondAttribute="centerY" constant="-0.5" id="8Xf-8d-W0y"/>
+                <constraint firstAttribute="bottom" secondItem="TQm-Sl-cl2" secondAttribute="bottom" constant="15" id="AkN-ea-Du5"/>
+                <constraint firstItem="TQm-Sl-cl2" firstAttribute="top" relation="greaterThanOrEqual" secondItem="33r-jA-fO7" secondAttribute="bottom" constant="2" id="G9M-3d-AqJ"/>
+                <constraint firstAttribute="trailing" secondItem="e4z-3U-gbx" secondAttribute="trailing" constant="15" id="UXQ-Jz-t9o"/>
+                <constraint firstAttribute="centerY" secondItem="h5H-40-ZoU" secondAttribute="centerY" id="fii-TO-G4i"/>
+                <constraint firstItem="TQm-Sl-cl2" firstAttribute="leading" secondItem="33r-jA-fO7" secondAttribute="leading" id="kFr-7j-wej"/>
+                <constraint firstItem="TQm-Sl-cl2" firstAttribute="trailing" secondItem="33r-jA-fO7" secondAttribute="trailing" id="oLh-6C-aFT"/>
+                <constraint firstItem="h5H-40-ZoU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="rjb-f0-nwD"/>
+                <constraint firstItem="33r-jA-fO7" firstAttribute="leading" secondItem="h5H-40-ZoU" secondAttribute="trailing" constant="15" id="tzB-cV-Q7S"/>
+            </constraints>
+            <size key="customSize" width="416" height="76"/>
+            <connections>
+                <outlet property="checkImageView" destination="h5H-40-ZoU" id="0wV-c8-Mzv"/>
+                <outlet property="detailsLabel" destination="TQm-Sl-cl2" id="jJl-M0-1xY"/>
+                <outlet property="titleLabel" destination="33r-jA-fO7" id="QRh-fP-GGN"/>
+            </connections>
+            <point key="canvasLocation" x="308" y="301"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="check_mark_0.png" width="23" height="23"/>
+        <image name="collection-disclosure.png" width="13" height="14"/>
+    </resources>
+</document>

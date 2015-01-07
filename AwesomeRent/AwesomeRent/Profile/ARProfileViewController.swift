@@ -38,8 +38,9 @@ class ARProfileViewController: UIViewController {
     }
     
     func onPressUploadButton(sender: UIBarButtonItem) {
-        let uploadItemVC = ARUploadItemViewController(nibName: "ARUploadItemViewController", bundle: nil)
-        self.presentViewController(uploadItemVC, animated: true, completion: nil)
+        let uploadItemVC = ARUploadItemAttributeListViewController(nibName: "ARUploadItemAttributeListViewController", bundle: nil)
+        let navigationVC = UINavigationController(rootViewController: uploadItemVC)
+        self.presentViewController(navigationVC, animated: true, completion: nil)
     }
     
     @IBAction func onPressLogoutButton(sender: AnyObject) {

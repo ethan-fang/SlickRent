@@ -17,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="FT2-OS-3FF">
-                    <rect key="frame" x="0.0" y="77" width="600" height="523"/>
+                    <rect key="frame" x="0.0" y="100" width="600" height="500"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="g86-13-dEW">
                         <size key="itemSize" width="50" height="50"/>
@@ -27,7 +27,7 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gsq-S5-CPI">
-                    <rect key="frame" x="16" y="27" width="75" height="30"/>
+                    <rect key="frame" x="16" y="60" width="75" height="30"/>
                     <state key="normal" title="Add Image">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -36,7 +36,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJ3-Rl-7WF">
-                    <rect key="frame" x="533" y="27" width="37" height="30"/>
+                    <rect key="frame" x="533" y="60" width="37" height="30"/>
                     <state key="normal" title="Done">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -47,14 +47,14 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="Gsq-S5-CPI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="27" id="Oz7-5e-I7I"/>
+                <constraint firstItem="Gsq-S5-CPI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="Oz7-5e-I7I"/>
                 <constraint firstItem="FT2-OS-3FF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="QjN-AS-ds2"/>
                 <constraint firstAttribute="bottom" secondItem="FT2-OS-3FF" secondAttribute="bottom" id="acO-CO-Ulv"/>
                 <constraint firstItem="Gsq-S5-CPI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="c0x-fS-BSa"/>
-                <constraint firstItem="WJ3-Rl-7WF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="27" id="el0-Li-YsZ"/>
+                <constraint firstItem="WJ3-Rl-7WF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="el0-Li-YsZ"/>
                 <constraint firstAttribute="trailing" secondItem="FT2-OS-3FF" secondAttribute="trailing" id="lg9-gc-Tt4"/>
                 <constraint firstAttribute="trailing" secondItem="WJ3-Rl-7WF" secondAttribute="trailing" constant="30" id="wwE-fe-0Oa"/>
-                <constraint firstItem="FT2-OS-3FF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="77" id="xjz-MJ-x3U"/>
+                <constraint firstItem="FT2-OS-3FF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="xjz-MJ-x3U"/>
             </constraints>
         </view>
     </objects>

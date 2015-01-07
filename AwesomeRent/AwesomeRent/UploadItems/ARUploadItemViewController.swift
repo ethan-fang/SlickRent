@@ -37,6 +37,7 @@ class ARUploadItemViewController: UIViewController, UIImagePickerControllerDeleg
     }
     
     override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         photoCollectionView.reloadData()
     }
     
