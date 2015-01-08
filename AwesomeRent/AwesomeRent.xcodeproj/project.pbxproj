@@ -63,6 +63,7 @@
 		FBE43B901A5D15F5004D1C13 /* check_mark_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBE43B811A5D15F5004D1C13 /* check_mark_1@2x.png */; };
 		FBE43B931A5D1671004D1C13 /* collection-disclosure.png in Resources */ = {isa = PBXBuildFile; fileRef = FBE43B911A5D1671004D1C13 /* collection-disclosure.png */; };
 		FBE43B941A5D1671004D1C13 /* collection-disclosure@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBE43B921A5D1671004D1C13 /* collection-disclosure@2x.png */; };
+		FBF87EE51A5E68AF00008FFC /* RAReorderableLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF87EE41A5E68AF00008FFC /* RAReorderableLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +172,7 @@
 		FBE43B811A5D15F5004D1C13 /* check_mark_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check_mark_1@2x.png"; sourceTree = "<group>"; };
 		FBE43B911A5D1671004D1C13 /* collection-disclosure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "collection-disclosure.png"; sourceTree = "<group>"; };
 		FBE43B921A5D1671004D1C13 /* collection-disclosure@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "collection-disclosure@2x.png"; sourceTree = "<group>"; };
+		FBF87EE41A5E68AF00008FFC /* RAReorderableLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAReorderableLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +318,7 @@
 		FBD2ED901A3D0A3800607FBC /* AwesomeRent */ = {
 			isa = PBXGroup;
 			children = (
+				FBF87EE21A5E68AF00008FFC /* Library */,
 				FBE43B6F1A5D15F5004D1C13 /* Resources */,
 				FB4909291A4B9BC600C1AE2B /* UploadItems */,
 				FB4909221A4B86BD00C1AE2B /* Signup */,
@@ -417,6 +420,22 @@
 				FBE43B811A5D15F5004D1C13 /* check_mark_1@2x.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		FBF87EE21A5E68AF00008FFC /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				FBF87EE31A5E68AF00008FFC /* RAReorderableLayout */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		FBF87EE31A5E68AF00008FFC /* RAReorderableLayout */ = {
+			isa = PBXGroup;
+			children = (
+				FBF87EE41A5E68AF00008FFC /* RAReorderableLayout.swift */,
+			);
+			path = RAReorderableLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -586,6 +605,7 @@
 				FBD2ED971A3D0A3900607FBC /* AwesomeRent.xcdatamodeld in Sources */,
 				FB7072CF1A5E3BB200E8CA98 /* ARUploadItemViewController.swift in Sources */,
 				FB4909281A4B87DE00C1AE2B /* ARSignupService.swift in Sources */,
+				FBF87EE51A5E68AF00008FFC /* RAReorderableLayout.swift in Sources */,
 				FB4909251A4B86D000C1AE2B /* ARSignupViewController.swift in Sources */,
 				FBCCD9FE1A467BA700CCD111 /* ARLoginService.swift in Sources */,
 				FB1E14421A3EA16900DEA1AC /* UserRouter.swift in Sources */,

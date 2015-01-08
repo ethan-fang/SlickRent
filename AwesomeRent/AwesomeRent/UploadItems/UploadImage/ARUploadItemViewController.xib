@@ -23,7 +23,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="183" id="D7u-F4-cw7"/>
                     </constraints>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="g86-13-dEW">
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="g86-13-dEW" customClass="RAReorderableLayout" customModule="AwesomeRent" customModuleProvider="target">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>

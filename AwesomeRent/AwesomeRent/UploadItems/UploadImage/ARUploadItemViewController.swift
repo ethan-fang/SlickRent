@@ -15,7 +15,7 @@ struct ARUploadItemImageCollectionViewConstants {
     static let kCellSpacing:CGFloat = 5
 }
 
-class ARUploadItemViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class ARUploadItemViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, RAReorderableLayoutDelegate, RAReorderableLayoutDataSource {
     let ImageCellIdentifier = "ImageCell"
     var imagePicker = UIImagePickerController()
     lazy var photoSourceActionSheetController:UIAlertController = self.initphotoSourceActionSheetController()
@@ -171,6 +171,48 @@ class ARUploadItemViewController: UIViewController, UIImagePickerControllerDeleg
         controller.addAction(actionLibrary)
         controller.addAction(actionCancel)
         return controller
+    }
+    
+    // RAReorderableLayout delegate datasource
+    
+    func collectionView(collectionView: UICollectionView, allowMoveAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return (self.photos.count > 1) && (self.photos.count > indexPath.item);
+    }
+    
+    func collectionView(collectionView: UICollectionView, atIndexPath: NSIndexPath, canMoveToIndexPath toIndexPath: NSIndexPath) -> Bool {
+        let canMove = self.photos.count > toIndexPath.item
+        println("Can move from \(atIndexPath.item) to \(toIndexPath.item) \(canMove)");
+        return canMove
+    }
+    
+    func collectionView(collectionView: UICollectionView, atIndexPath: NSIndexPath, didMoveToIndexPath toIndexPath: NSIndexPath) {
+        println("Did move from \(atIndexPath.item) to \(toIndexPath.item)");
+        
+        var photo: UIImage = self.photos.removeAtIndex(atIndexPath.item);
+        
+        if toIndexPath.item >= self.photos.count {
+            self.photos.insert(photo, atIndex: self.photos.count)
+        } else {
+            self.photos.insert(photo, atIndex: toIndexPath.item)
+        }
+    }
+    
+    
+    
+    func scrollTrigerEdgeInsetsInCollectionView(collectionView: UICollectionView) -> UIEdgeInsets {
+        return UIEdgeInsetsMake(100.0, 100.0, 100.0, 100.0)
+    }
+    
+    func collectionView(collectionView: UICollectionView, reorderingItemAlphaInSection section: Int) -> CGFloat {
+        if section == 0 {
+            return 0
+        }else {
+            return 0.3
+        }
+    }
+    
+    func scrollTrigerPaddingInCollectionView(collectionView: UICollectionView) -> UIEdgeInsets {
+        return UIEdgeInsetsMake(self.photoCollectionView.contentInset.top, 0, self.photoCollectionView.contentInset.bottom, 0)
     }
     
 }
