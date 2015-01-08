@@ -21,6 +21,8 @@ class ARUploadItemViewController: UIViewController, UIImagePickerControllerDeleg
     lazy var photoSourceActionSheetController:UIAlertController = self.initphotoSourceActionSheetController()
     var cellWidth:CGFloat = 50
     
+    @IBOutlet var descriptionLabel: UILabel!
+    
     @IBOutlet var collectionViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet var photoCollectionView: UICollectionView!
     var photos = [UIImage]();
@@ -33,6 +35,8 @@ class ARUploadItemViewController: UIViewController, UIImagePickerControllerDeleg
         let columnHeaderViewNIB = UINib(nibName:"ARUploadItemImageCellCollectionViewCell", bundle: nil)
         photoCollectionView.registerNib(columnHeaderViewNIB, forCellWithReuseIdentifier: ImageCellIdentifier)
         photoCollectionView.hidden = true
+        
+        descriptionLabel.text = "Tap & Hold to reorder photos"
         
         if ARCameraUtils.doesCameraSupportTakingPhotos(){
             println("The camera supports taking photos")
@@ -181,13 +185,10 @@ class ARUploadItemViewController: UIViewController, UIImagePickerControllerDeleg
     
     func collectionView(collectionView: UICollectionView, atIndexPath: NSIndexPath, canMoveToIndexPath toIndexPath: NSIndexPath) -> Bool {
         let canMove = self.photos.count > toIndexPath.item
-        println("Can move from \(atIndexPath.item) to \(toIndexPath.item) \(canMove)");
         return canMove
     }
     
     func collectionView(collectionView: UICollectionView, atIndexPath: NSIndexPath, didMoveToIndexPath toIndexPath: NSIndexPath) {
-        println("Did move from \(atIndexPath.item) to \(toIndexPath.item)");
-        
         var photo: UIImage = self.photos.removeAtIndex(atIndexPath.item);
         
         if toIndexPath.item >= self.photos.count {
