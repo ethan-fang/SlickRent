@@ -1,0 +1,176 @@
+//
+//  ARUploadItemViewController.swift
+//  AwesomeRent
+//
+//  Created by Ethan Fang on 12/24/14.
+//  Copyright (c) 2014 awesomerent. All rights reserved.
+//
+
+import UIKit
+import MobileCoreServices
+
+struct ARUploadItemImageCollectionViewConstants {
+    static let kMaxPhoto:Int = 12
+    static let kColumn:CGFloat = 4
+    static let kCellSpacing:CGFloat = 5
+}
+
+class ARUploadItemViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    let ImageCellIdentifier = "ImageCell"
+    var imagePicker = UIImagePickerController()
+    lazy var photoSourceActionSheetController:UIAlertController = self.initphotoSourceActionSheetController()
+    var cellWidth:CGFloat = 50
+    
+    @IBOutlet var collectionViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet var photoCollectionView: UICollectionView!
+    var photos = [UIImage]();
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationController?.navigationBar.translucent = false
+        photoCollectionView.delegate = self
+        photoCollectionView.dataSource = self
+        let columnHeaderViewNIB = UINib(nibName:"ARUploadItemImageCellCollectionViewCell", bundle: nil)
+        photoCollectionView.registerNib(columnHeaderViewNIB, forCellWithReuseIdentifier: ImageCellIdentifier)
+        photoCollectionView.hidden = true
+        
+        if ARCameraUtils.doesCameraSupportTakingPhotos(){
+            println("The camera supports taking photos")
+        } else {
+            println("The camera does not support taking photos")
+        }
+        
+        if ARCameraUtils.doesCameraSupportShootingVideos(){
+            println("The camera supports shooting videos")
+        } else {
+            println("The camera does not support shooting videos")
+        }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        cellWidth = (photoCollectionView.frame.size.width - (ARUploadItemImageCollectionViewConstants.kColumn + 1) * ARUploadItemImageCollectionViewConstants.kCellSpacing) / ARUploadItemImageCollectionViewConstants.kColumn
+        photoCollectionView.collectionViewLayout.invalidateLayout()
+        collectionViewHeightConstraint.constant = photoCollectionView.collectionViewLayout.collectionViewContentSize().height
+        photoCollectionView.hidden = false
+        self.view.layoutIfNeeded()
+        
+        println("collection view height:\(photoCollectionView.collectionViewLayout.collectionViewContentSize().height)")
+        println("collection view width:\(photoCollectionView.collectionViewLayout.collectionViewContentSize().width)")
+        let supposeWidth = ARUploadItemImageCollectionViewConstants.kColumn * (cellWidth + ARUploadItemImageCollectionViewConstants.kCellSpacing) + ARUploadItemImageCollectionViewConstants.kCellSpacing
+        println("content view supposed with:\(supposeWidth)")
+        println("cell width:\(cellWidth)")
+    }
+    
+    func imagePickerController(picker: UIImagePickerController!,
+        didFinishPickingMediaWithInfo info: [NSObject : AnyObject]!){
+            
+            let tempImage = info[UIImagePickerControllerOriginalImage] as UIImage
+            photos.append(tempImage)
+            self.photoCollectionView.reloadData()
+            picker.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func onPressDoneButton(sender: AnyObject) {
+        if (photos.count == 0) {
+            return
+        }
+        let image:UIImage = photos[0]
+        ARUploadImageService.uploadImage(image)
+    }
+    
+    func presentPhotoLibrary() {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.SavedPhotosAlbum){
+            println("Button capture")
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.SavedPhotosAlbum;
+            imagePicker.allowsEditing = false
+            
+            self.presentViewController(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
+    
+    func presentCamera() {
+        if ARCameraUtils.isCameraAvailable() && ARCameraUtils.doesCameraSupportTakingPhotos(){
+            
+            let controller = UIImagePickerController()
+            
+            let theController = controller
+            theController.sourceType = .Camera
+            
+            theController.mediaTypes = [kUTTypeImage as NSString]
+            
+            theController.allowsEditing = true
+            theController.delegate = self
+            
+            presentViewController(theController, animated: true, completion: nil)
+            
+            
+        } else {
+            println("Camera is not available")
+        }
+    }
+    
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return ARUploadItemImageCollectionViewConstants.kMaxPhoto
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = photoCollectionView.dequeueReusableCellWithReuseIdentifier(ImageCellIdentifier, forIndexPath: indexPath) as ARUploadItemImageCellCollectionViewCell
+        
+        let photo:UIImage? = photos.count > indexPath.row ? photos[indexPath.row] : nil
+        let model = ARUploadItemImageCellModel(isCamera: indexPath.row == photos.count, photo: photo)
+        cell.model = model
+        return cell;
+    }
+    
+    func collectionView(collectionView: UICollectionView!,
+        layout collectionViewLayout: UICollectionViewLayout!,
+        insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+            return UIEdgeInsets(top: ARUploadItemImageCollectionViewConstants.kCellSpacing,
+                left: ARUploadItemImageCollectionViewConstants.kCellSpacing,
+                bottom: ARUploadItemImageCollectionViewConstants.kCellSpacing,
+                right: ARUploadItemImageCollectionViewConstants.kCellSpacing)
+            
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSizeMake(cellWidth, cellWidth)
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let isCameraCell = indexPath.row == photos.count
+        if (isCameraCell) {
+            self.presentViewController(self.photoSourceActionSheetController, animated: true, completion: nil)
+        } else {
+            
+        }
+    }
+    
+    func initphotoSourceActionSheetController() -> UIAlertController {
+        var controller = UIAlertController(
+            title: nil,
+            message: nil,
+            preferredStyle: .ActionSheet)
+        
+        let actionCamera = UIAlertAction(title: "Camera", style: UIAlertActionStyle.Default, handler: {(paramAction:UIAlertAction!) in
+            self.presentCamera()
+        })
+        
+        let actionLibrary = UIAlertAction(title: "Photo Library", style: UIAlertActionStyle.Default, handler: {(paramAction:UIAlertAction!) in
+            self.presentPhotoLibrary()
+        })
+        
+        let actionCancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) { (cancelSelected) -> Void in
+            println("Cancel")
+        }
+        
+        controller.addAction(actionCamera)
+        controller.addAction(actionLibrary)
+        controller.addAction(actionCancel)
+        return controller
+    }
+    
+}

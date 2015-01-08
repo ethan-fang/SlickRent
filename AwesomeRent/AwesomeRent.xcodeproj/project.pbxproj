@@ -13,10 +13,21 @@
 		FB4909251A4B86D000C1AE2B /* ARSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4909231A4B86D000C1AE2B /* ARSignupViewController.swift */; };
 		FB4909261A4B86D000C1AE2B /* ARSignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB4909241A4B86D000C1AE2B /* ARSignupViewController.xib */; };
 		FB4909281A4B87DE00C1AE2B /* ARSignupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4909271A4B87DE00C1AE2B /* ARSignupService.swift */; };
-		FB49092C1A4B9BDA00C1AE2B /* ARUploadItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB49092A1A4B9BDA00C1AE2B /* ARUploadItemViewController.swift */; };
-		FB49092D1A4B9BDA00C1AE2B /* ARUploadItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB49092B1A4B9BDA00C1AE2B /* ARUploadItemViewController.xib */; };
 		FB4909331A4BABF200C1AE2B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4909321A4BABF200C1AE2B /* MobileCoreServices.framework */; };
 		FB4909351A4BB1B400C1AE2B /* ARCameraUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4909341A4BB1B400C1AE2B /* ARCameraUtils.swift */; };
+		FB7072C11A5E3B8600E8CA98 /* ARUploadItemAttributeListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7072BC1A5E3B8600E8CA98 /* ARUploadItemAttributeListItemCell.swift */; };
+		FB7072C21A5E3B8600E8CA98 /* ARUploadItemAttributeListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB7072BD1A5E3B8600E8CA98 /* ARUploadItemAttributeListItemCell.xib */; };
+		FB7072C31A5E3B8600E8CA98 /* ARUploadItemAttributeListItemCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7072BE1A5E3B8600E8CA98 /* ARUploadItemAttributeListItemCellModel.swift */; };
+		FB7072C41A5E3B8600E8CA98 /* ARUploadItemAttributeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7072BF1A5E3B8600E8CA98 /* ARUploadItemAttributeListViewController.swift */; };
+		FB7072C51A5E3B8600E8CA98 /* ARUploadItemAttributeListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB7072C01A5E3B8600E8CA98 /* ARUploadItemAttributeListViewController.xib */; };
+		FB7072CC1A5E3BB200E8CA98 /* ARUploadImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7072C71A5E3BB200E8CA98 /* ARUploadImageService.swift */; };
+		FB7072CD1A5E3BB200E8CA98 /* ARUploadItemImageCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7072C81A5E3BB200E8CA98 /* ARUploadItemImageCellCollectionViewCell.swift */; };
+		FB7072CE1A5E3BB200E8CA98 /* ARUploadItemImageCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB7072C91A5E3BB200E8CA98 /* ARUploadItemImageCellCollectionViewCell.xib */; };
+		FB7072CF1A5E3BB200E8CA98 /* ARUploadItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7072CA1A5E3BB200E8CA98 /* ARUploadItemViewController.swift */; };
+		FB7072D01A5E3BB200E8CA98 /* ARUploadItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB7072CB1A5E3BB200E8CA98 /* ARUploadItemViewController.xib */; };
+		FB7072D21A5E42BD00E8CA98 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = FB7072D11A5E42BD00E8CA98 /* camera.png */; };
+		FB7072D41A5E474F00E8CA98 /* ARColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7072D31A5E474F00E8CA98 /* ARColorUtils.swift */; };
+		FB7072D61A5E484200E8CA98 /* ARUploadItemImageCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7072D51A5E484200E8CA98 /* ARUploadItemImageCellModel.swift */; };
 		FBCCD9E81A465C3E00CCD111 /* ARAlertUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCCD9E71A465C3E00CCD111 /* ARAlertUtils.swift */; };
 		FBCCD9EB1A465E7700CCD111 /* ARUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCCD9EA1A465E7700CCD111 /* ARUserManager.swift */; };
 		FBCCD9F91A46756800CCD111 /* ARProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCCD9F71A46756800CCD111 /* ARProfileViewController.swift */; };
@@ -33,15 +44,8 @@
 		FBD2EDAD1A3D0A3900607FBC /* AwesomeRentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD2EDAC1A3D0A3900607FBC /* AwesomeRentTests.swift */; };
 		FBD2EDB81A3D0CEF00607FBC /* ARLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBD2EDB71A3D0CEF00607FBC /* ARLoginViewController.xib */; };
 		FBD2EDBA1A3D0D0200607FBC /* ARLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD2EDB91A3D0D0200607FBC /* ARLoginViewController.swift */; };
-		FBD9127D1A58BD1B00DD214D /* ARUploadItemImageCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD9127B1A58BD1B00DD214D /* ARUploadItemImageCellCollectionViewCell.swift */; };
-		FBD9127E1A58BD1B00DD214D /* ARUploadItemImageCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBD9127C1A58BD1B00DD214D /* ARUploadItemImageCellCollectionViewCell.xib */; };
 		FBE43B511A5BC68E004D1C13 /* ImageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE43B501A5BC68E004D1C13 /* ImageRouter.swift */; };
 		FBE43B541A5BC728004D1C13 /* RouterConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE43B531A5BC728004D1C13 /* RouterConstants.swift */; };
-		FBE43B561A5BCFD8004D1C13 /* ARUploadImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE43B551A5BCFD8004D1C13 /* ARUploadImageService.swift */; };
-		FBE43B601A5D08C1004D1C13 /* ARUploadItemAttributeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE43B5E1A5D08C1004D1C13 /* ARUploadItemAttributeListViewController.swift */; };
-		FBE43B611A5D08C1004D1C13 /* ARUploadItemAttributeListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBE43B5F1A5D08C1004D1C13 /* ARUploadItemAttributeListViewController.xib */; };
-		FBE43B641A5D11B5004D1C13 /* ARUploadItemAttributeListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE43B621A5D11B5004D1C13 /* ARUploadItemAttributeListItemCell.swift */; };
-		FBE43B651A5D11B5004D1C13 /* ARUploadItemAttributeListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBE43B631A5D11B5004D1C13 /* ARUploadItemAttributeListItemCell.xib */; };
 		FBE43B821A5D15F5004D1C13 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = FBE43B721A5D15F5004D1C13 /* LICENSE.txt */; };
 		FBE43B831A5D15F5004D1C13 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBE43B731A5D15F5004D1C13 /* OpenSans-Bold.ttf */; };
 		FBE43B841A5D15F5004D1C13 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBE43B741A5D15F5004D1C13 /* OpenSans-BoldItalic.ttf */; };
@@ -59,7 +63,6 @@
 		FBE43B901A5D15F5004D1C13 /* check_mark_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBE43B811A5D15F5004D1C13 /* check_mark_1@2x.png */; };
 		FBE43B931A5D1671004D1C13 /* collection-disclosure.png in Resources */ = {isa = PBXBuildFile; fileRef = FBE43B911A5D1671004D1C13 /* collection-disclosure.png */; };
 		FBE43B941A5D1671004D1C13 /* collection-disclosure@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBE43B921A5D1671004D1C13 /* collection-disclosure@2x.png */; };
-		FBE43B961A5D18C8004D1C13 /* ARUploadItemAttributeListItemCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE43B951A5D18C8004D1C13 /* ARUploadItemAttributeListItemCellModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,10 +117,21 @@
 		FB4909231A4B86D000C1AE2B /* ARSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARSignupViewController.swift; sourceTree = "<group>"; };
 		FB4909241A4B86D000C1AE2B /* ARSignupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARSignupViewController.xib; sourceTree = "<group>"; };
 		FB4909271A4B87DE00C1AE2B /* ARSignupService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARSignupService.swift; sourceTree = "<group>"; };
-		FB49092A1A4B9BDA00C1AE2B /* ARUploadItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARUploadItemViewController.swift; sourceTree = "<group>"; };
-		FB49092B1A4B9BDA00C1AE2B /* ARUploadItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARUploadItemViewController.xib; sourceTree = "<group>"; };
 		FB4909321A4BABF200C1AE2B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		FB4909341A4BB1B400C1AE2B /* ARCameraUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARCameraUtils.swift; sourceTree = "<group>"; };
+		FB7072BC1A5E3B8600E8CA98 /* ARUploadItemAttributeListItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARUploadItemAttributeListItemCell.swift; sourceTree = "<group>"; };
+		FB7072BD1A5E3B8600E8CA98 /* ARUploadItemAttributeListItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARUploadItemAttributeListItemCell.xib; sourceTree = "<group>"; };
+		FB7072BE1A5E3B8600E8CA98 /* ARUploadItemAttributeListItemCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARUploadItemAttributeListItemCellModel.swift; sourceTree = "<group>"; };
+		FB7072BF1A5E3B8600E8CA98 /* ARUploadItemAttributeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARUploadItemAttributeListViewController.swift; sourceTree = "<group>"; };
+		FB7072C01A5E3B8600E8CA98 /* ARUploadItemAttributeListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARUploadItemAttributeListViewController.xib; sourceTree = "<group>"; };
+		FB7072C71A5E3BB200E8CA98 /* ARUploadImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARUploadImageService.swift; sourceTree = "<group>"; };
+		FB7072C81A5E3BB200E8CA98 /* ARUploadItemImageCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARUploadItemImageCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		FB7072C91A5E3BB200E8CA98 /* ARUploadItemImageCellCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARUploadItemImageCellCollectionViewCell.xib; sourceTree = "<group>"; };
+		FB7072CA1A5E3BB200E8CA98 /* ARUploadItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARUploadItemViewController.swift; sourceTree = "<group>"; };
+		FB7072CB1A5E3BB200E8CA98 /* ARUploadItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARUploadItemViewController.xib; sourceTree = "<group>"; };
+		FB7072D11A5E42BD00E8CA98 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		FB7072D31A5E474F00E8CA98 /* ARColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARColorUtils.swift; sourceTree = "<group>"; };
+		FB7072D51A5E484200E8CA98 /* ARUploadItemImageCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARUploadItemImageCellModel.swift; sourceTree = "<group>"; };
 		FBCCD9E71A465C3E00CCD111 /* ARAlertUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAlertUtils.swift; sourceTree = "<group>"; };
 		FBCCD9EA1A465E7700CCD111 /* ARUserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARUserManager.swift; sourceTree = "<group>"; };
 		FBCCD9F71A46756800CCD111 /* ARProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARProfileViewController.swift; sourceTree = "<group>"; };
@@ -138,15 +152,8 @@
 		FBD2EDAC1A3D0A3900607FBC /* AwesomeRentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomeRentTests.swift; sourceTree = "<group>"; };
 		FBD2EDB71A3D0CEF00607FBC /* ARLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARLoginViewController.xib; sourceTree = "<group>"; };
 		FBD2EDB91A3D0D0200607FBC /* ARLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARLoginViewController.swift; sourceTree = "<group>"; };
-		FBD9127B1A58BD1B00DD214D /* ARUploadItemImageCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARUploadItemImageCellCollectionViewCell.swift; sourceTree = "<group>"; };
-		FBD9127C1A58BD1B00DD214D /* ARUploadItemImageCellCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARUploadItemImageCellCollectionViewCell.xib; sourceTree = "<group>"; };
 		FBE43B501A5BC68E004D1C13 /* ImageRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRouter.swift; sourceTree = "<group>"; };
 		FBE43B531A5BC728004D1C13 /* RouterConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterConstants.swift; sourceTree = "<group>"; };
-		FBE43B551A5BCFD8004D1C13 /* ARUploadImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARUploadImageService.swift; sourceTree = "<group>"; };
-		FBE43B5E1A5D08C1004D1C13 /* ARUploadItemAttributeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARUploadItemAttributeListViewController.swift; sourceTree = "<group>"; };
-		FBE43B5F1A5D08C1004D1C13 /* ARUploadItemAttributeListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARUploadItemAttributeListViewController.xib; sourceTree = "<group>"; };
-		FBE43B621A5D11B5004D1C13 /* ARUploadItemAttributeListItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARUploadItemAttributeListItemCell.swift; sourceTree = "<group>"; };
-		FBE43B631A5D11B5004D1C13 /* ARUploadItemAttributeListItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARUploadItemAttributeListItemCell.xib; sourceTree = "<group>"; };
 		FBE43B721A5D15F5004D1C13 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		FBE43B731A5D15F5004D1C13 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		FBE43B741A5D15F5004D1C13 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -164,7 +171,6 @@
 		FBE43B811A5D15F5004D1C13 /* check_mark_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check_mark_1@2x.png"; sourceTree = "<group>"; };
 		FBE43B911A5D1671004D1C13 /* collection-disclosure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "collection-disclosure.png"; sourceTree = "<group>"; };
 		FBE43B921A5D1671004D1C13 /* collection-disclosure@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "collection-disclosure@2x.png"; sourceTree = "<group>"; };
-		FBE43B951A5D18C8004D1C13 /* ARUploadItemAttributeListItemCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARUploadItemAttributeListItemCellModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +207,7 @@
 			children = (
 				FBCCD9E71A465C3E00CCD111 /* ARAlertUtils.swift */,
 				FB4909341A4BB1B400C1AE2B /* ARCameraUtils.swift */,
+				FB7072D31A5E474F00E8CA98 /* ARColorUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -228,14 +235,35 @@
 		FB4909291A4B9BC600C1AE2B /* UploadItems */ = {
 			isa = PBXGroup;
 			children = (
-				FBE43B5D1A5D08C1004D1C13 /* Main */,
-				FB49092A1A4B9BDA00C1AE2B /* ARUploadItemViewController.swift */,
-				FB49092B1A4B9BDA00C1AE2B /* ARUploadItemViewController.xib */,
-				FBD9127B1A58BD1B00DD214D /* ARUploadItemImageCellCollectionViewCell.swift */,
-				FBD9127C1A58BD1B00DD214D /* ARUploadItemImageCellCollectionViewCell.xib */,
-				FBE43B551A5BCFD8004D1C13 /* ARUploadImageService.swift */,
+				FB7072C61A5E3BB200E8CA98 /* UploadImage */,
+				FB7072BB1A5E3B8600E8CA98 /* AttributeList */,
 			);
 			path = UploadItems;
+			sourceTree = "<group>";
+		};
+		FB7072BB1A5E3B8600E8CA98 /* AttributeList */ = {
+			isa = PBXGroup;
+			children = (
+				FB7072BC1A5E3B8600E8CA98 /* ARUploadItemAttributeListItemCell.swift */,
+				FB7072BD1A5E3B8600E8CA98 /* ARUploadItemAttributeListItemCell.xib */,
+				FB7072BE1A5E3B8600E8CA98 /* ARUploadItemAttributeListItemCellModel.swift */,
+				FB7072BF1A5E3B8600E8CA98 /* ARUploadItemAttributeListViewController.swift */,
+				FB7072C01A5E3B8600E8CA98 /* ARUploadItemAttributeListViewController.xib */,
+			);
+			path = AttributeList;
+			sourceTree = "<group>";
+		};
+		FB7072C61A5E3BB200E8CA98 /* UploadImage */ = {
+			isa = PBXGroup;
+			children = (
+				FB7072C71A5E3BB200E8CA98 /* ARUploadImageService.swift */,
+				FB7072C81A5E3BB200E8CA98 /* ARUploadItemImageCellCollectionViewCell.swift */,
+				FB7072C91A5E3BB200E8CA98 /* ARUploadItemImageCellCollectionViewCell.xib */,
+				FB7072D51A5E484200E8CA98 /* ARUploadItemImageCellModel.swift */,
+				FB7072CA1A5E3BB200E8CA98 /* ARUploadItemViewController.swift */,
+				FB7072CB1A5E3BB200E8CA98 /* ARUploadItemViewController.xib */,
+			);
+			path = UploadImage;
 			sourceTree = "<group>";
 		};
 		FBCCD9E91A465E6B00CCD111 /* Managers */ = {
@@ -342,18 +370,6 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		FBE43B5D1A5D08C1004D1C13 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				FBE43B5E1A5D08C1004D1C13 /* ARUploadItemAttributeListViewController.swift */,
-				FBE43B5F1A5D08C1004D1C13 /* ARUploadItemAttributeListViewController.xib */,
-				FBE43B621A5D11B5004D1C13 /* ARUploadItemAttributeListItemCell.swift */,
-				FBE43B631A5D11B5004D1C13 /* ARUploadItemAttributeListItemCell.xib */,
-				FBE43B951A5D18C8004D1C13 /* ARUploadItemAttributeListItemCellModel.swift */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
 		FBE43B6F1A5D15F5004D1C13 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -392,6 +408,7 @@
 		FBE43B7D1A5D15F5004D1C13 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				FB7072D11A5E42BD00E8CA98 /* camera.png */,
 				FBE43B911A5D1671004D1C13 /* collection-disclosure.png */,
 				FBE43B921A5D1671004D1C13 /* collection-disclosure@2x.png */,
 				FBE43B7E1A5D15F5004D1C13 /* check_mark_0.png */,
@@ -511,7 +528,6 @@
 				FBE43B821A5D15F5004D1C13 /* LICENSE.txt in Resources */,
 				FBD2ED9C1A3D0A3900607FBC /* Main.storyboard in Resources */,
 				FBE43B831A5D15F5004D1C13 /* OpenSans-Bold.ttf in Resources */,
-				FBE43B611A5D08C1004D1C13 /* ARUploadItemAttributeListViewController.xib in Resources */,
 				FBE43B901A5D15F5004D1C13 /* check_mark_1@2x.png in Resources */,
 				FBE43B8D1A5D15F5004D1C13 /* check_mark_0.png in Resources */,
 				FBE43B8B1A5D15F5004D1C13 /* OpenSans-Semibold.ttf in Resources */,
@@ -521,19 +537,21 @@
 				FBCCD9FA1A46756800CCD111 /* ARProfileViewController.xib in Resources */,
 				FBD2EDA11A3D0A3900607FBC /* LaunchScreen.xib in Resources */,
 				FBE43B8F1A5D15F5004D1C13 /* check_mark_1.png in Resources */,
+				FB7072C21A5E3B8600E8CA98 /* ARUploadItemAttributeListItemCell.xib in Resources */,
 				FBE43B891A5D15F5004D1C13 /* OpenSans-LightItalic.ttf in Resources */,
 				FBE43B8C1A5D15F5004D1C13 /* OpenSans-SemiboldItalic.ttf in Resources */,
 				FBE43B861A5D15F5004D1C13 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				FBE43B8A1A5D15F5004D1C13 /* OpenSans-Regular.ttf in Resources */,
-				FB49092D1A4B9BDA00C1AE2B /* ARUploadItemViewController.xib in Resources */,
+				FB7072CE1A5E3BB200E8CA98 /* ARUploadItemImageCellCollectionViewCell.xib in Resources */,
+				FB7072C51A5E3B8600E8CA98 /* ARUploadItemAttributeListViewController.xib in Resources */,
 				FBE43B871A5D15F5004D1C13 /* OpenSans-Italic.ttf in Resources */,
 				FBE43B941A5D1671004D1C13 /* collection-disclosure@2x.png in Resources */,
+				FB7072D01A5E3BB200E8CA98 /* ARUploadItemViewController.xib in Resources */,
+				FB7072D21A5E42BD00E8CA98 /* camera.png in Resources */,
 				FBE43B841A5D15F5004D1C13 /* OpenSans-BoldItalic.ttf in Resources */,
 				FBE43B851A5D15F5004D1C13 /* OpenSans-ExtraBold.ttf in Resources */,
-				FBE43B651A5D11B5004D1C13 /* ARUploadItemAttributeListItemCell.xib in Resources */,
 				FBE43B931A5D1671004D1C13 /* collection-disclosure.png in Resources */,
 				FBD2ED9E1A3D0A3900607FBC /* Images.xcassets in Resources */,
-				FBD9127E1A58BD1B00DD214D /* ARUploadItemImageCellCollectionViewCell.xib in Resources */,
 				FB4909261A4B86D000C1AE2B /* ARSignupViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -552,29 +570,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB7072C41A5E3B8600E8CA98 /* ARUploadItemAttributeListViewController.swift in Sources */,
+				FB7072C31A5E3B8600E8CA98 /* ARUploadItemAttributeListItemCellModel.swift in Sources */,
 				FBE43B511A5BC68E004D1C13 /* ImageRouter.swift in Sources */,
-				FB49092C1A4B9BDA00C1AE2B /* ARUploadItemViewController.swift in Sources */,
 				FBD2ED991A3D0A3900607FBC /* ViewController.swift in Sources */,
 				FBCCD9F91A46756800CCD111 /* ARProfileViewController.swift in Sources */,
-				FBE43B601A5D08C1004D1C13 /* ARUploadItemAttributeListViewController.swift in Sources */,
+				FB7072CD1A5E3BB200E8CA98 /* ARUploadItemImageCellCollectionViewCell.swift in Sources */,
 				FB1E143D1A3E262200DEA1AC /* ARApiClient.swift in Sources */,
 				FBD2EDBA1A3D0D0200607FBC /* ARLoginViewController.swift in Sources */,
+				FB7072D41A5E474F00E8CA98 /* ARColorUtils.swift in Sources */,
 				FBCCD9FC1A467AA100CCD111 /* ARUserInfo.swift in Sources */,
-				FBE43B561A5BCFD8004D1C13 /* ARUploadImageService.swift in Sources */,
+				FB7072CC1A5E3BB200E8CA98 /* ARUploadImageService.swift in Sources */,
 				FBCCD9EB1A465E7700CCD111 /* ARUserManager.swift in Sources */,
-				FBE43B641A5D11B5004D1C13 /* ARUploadItemAttributeListItemCell.swift in Sources */,
 				FBCCD9E81A465C3E00CCD111 /* ARAlertUtils.swift in Sources */,
-				FBE43B961A5D18C8004D1C13 /* ARUploadItemAttributeListItemCellModel.swift in Sources */,
 				FBD2ED971A3D0A3900607FBC /* AwesomeRent.xcdatamodeld in Sources */,
+				FB7072CF1A5E3BB200E8CA98 /* ARUploadItemViewController.swift in Sources */,
 				FB4909281A4B87DE00C1AE2B /* ARSignupService.swift in Sources */,
-				FBD9127D1A58BD1B00DD214D /* ARUploadItemImageCellCollectionViewCell.swift in Sources */,
 				FB4909251A4B86D000C1AE2B /* ARSignupViewController.swift in Sources */,
 				FBCCD9FE1A467BA700CCD111 /* ARLoginService.swift in Sources */,
 				FB1E14421A3EA16900DEA1AC /* UserRouter.swift in Sources */,
 				FB1E143F1A3E271300DEA1AC /* ARNetworkClient.swift in Sources */,
+				FB7072D61A5E484200E8CA98 /* ARUploadItemImageCellModel.swift in Sources */,
 				FB4909351A4BB1B400C1AE2B /* ARCameraUtils.swift in Sources */,
 				FBE43B541A5BC728004D1C13 /* RouterConstants.swift in Sources */,
 				FBD2ED941A3D0A3800607FBC /* AppDelegate.swift in Sources */,
+				FB7072C11A5E3B8600E8CA98 /* ARUploadItemAttributeListItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

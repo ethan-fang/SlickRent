@@ -54,10 +54,6 @@ class ARUploadItemAttributeListItemCell: UICollectionViewCell {
     
     func cellHeight() -> CGFloat {
         let height = self.contentView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize).height
-        
-        println("titleLabel:\(titleLabel.frame)")
-        println("detailsLabel:\(detailsLabel.frame)")
-        println("Height:\(height)")
         return height;
     }
 }

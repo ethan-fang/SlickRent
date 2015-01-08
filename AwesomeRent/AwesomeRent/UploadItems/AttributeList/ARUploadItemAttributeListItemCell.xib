@@ -28,7 +28,7 @@
                             <constraint firstAttribute="width" constant="23" id="hAR-wI-gn5"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="253" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33r-jA-fO7">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="253" verticalCompressionResistancePriority="751" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33r-jA-fO7">
                         <rect key="frame" x="53" y="15" width="320" height="24"/>
                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -42,7 +42,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQm-Sl-cl2">
-                        <rect key="frame" x="53" y="40" width="320" height="21"/>
+                        <rect key="frame" x="53" y="41" width="320" height="21"/>
                         <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="15"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -54,7 +54,7 @@
                 <constraint firstItem="33r-jA-fO7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="1ub-HG-hDD"/>
                 <constraint firstItem="e4z-3U-gbx" firstAttribute="leading" secondItem="33r-jA-fO7" secondAttribute="trailing" constant="15" id="2g4-es-d6N"/>
                 <constraint firstAttribute="centerY" secondItem="e4z-3U-gbx" secondAttribute="centerY" constant="-0.5" id="8Xf-8d-W0y"/>
-                <constraint firstAttribute="bottom" secondItem="TQm-Sl-cl2" secondAttribute="bottom" constant="15" id="AkN-ea-Du5"/>
+                <constraint firstAttribute="bottom" secondItem="TQm-Sl-cl2" secondAttribute="bottom" priority="999" constant="15" id="AkN-ea-Du5"/>
                 <constraint firstItem="TQm-Sl-cl2" firstAttribute="top" relation="greaterThanOrEqual" secondItem="33r-jA-fO7" secondAttribute="bottom" constant="2" id="G9M-3d-AqJ"/>
                 <constraint firstAttribute="trailing" secondItem="e4z-3U-gbx" secondAttribute="trailing" constant="15" id="UXQ-Jz-t9o"/>
                 <constraint firstAttribute="centerY" secondItem="h5H-40-ZoU" secondAttribute="centerY" id="fii-TO-G4i"/>
@@ -63,7 +63,7 @@
                 <constraint firstItem="h5H-40-ZoU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="rjb-f0-nwD"/>
                 <constraint firstItem="33r-jA-fO7" firstAttribute="leading" secondItem="h5H-40-ZoU" secondAttribute="trailing" constant="15" id="tzB-cV-Q7S"/>
             </constraints>
-            <size key="customSize" width="416" height="76"/>
+            <size key="customSize" width="406" height="5"/>
             <connections>
                 <outlet property="checkImageView" destination="h5H-40-ZoU" id="0wV-c8-Mzv"/>
                 <outlet property="detailsLabel" destination="TQm-Sl-cl2" id="jJl-M0-1xY"/>

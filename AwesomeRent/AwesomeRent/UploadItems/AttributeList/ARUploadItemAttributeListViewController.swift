@@ -34,11 +34,14 @@ class ARUploadItemAttributeListViewController: UIViewController, UICollectionVie
                 ARUploadItemAttributeListItemCellModel(isChecked: false, title: "Preferences", details: "Select")
             ]
         ]
+        collectionView.hidden = true
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         self.setupSizes()
+        self.collectionView.collectionViewLayout.invalidateLayout();
+        collectionView.hidden = false
     }
     
     func setupSizes() {
@@ -59,8 +62,6 @@ class ARUploadItemAttributeListViewController: UIViewController, UICollectionVie
             cellSizes.addObject(sectionCellSizes)
         }
         self.cellSizes = cellSizes;
-        
-        self.collectionView.collectionViewLayout.invalidateLayout();
     }
         
     func setupSaveAndCloseButton() {

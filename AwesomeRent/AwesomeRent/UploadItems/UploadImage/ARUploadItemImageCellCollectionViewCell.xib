@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ARUploadItemImageCellCollectionViewCell" customModule="AwesomeRent" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="92" height="86"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="92" height="86"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eju-eL-9XC" userLabel="photo">
+                        <rect key="frame" x="-39" y="18" width="170" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="ass-s3-pVR"/>
+                            <constraint firstAttribute="width" constant="170" id="tHC-j2-TcT"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera.png" translatesAutoresizingMaskIntoConstraints="NO" id="jC9-9T-J4Y" userLabel="camera_icon">
+                        <rect key="frame" x="15" y="11" width="63" height="63"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="jC9-9T-J4Y" secondAttribute="height" multiplier="1:1" id="0Zl-t6-NnJ"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="Eju-eL-9XC" secondAttribute="centerY" id="3jf-KK-7jI"/>
+                <constraint firstItem="jC9-9T-J4Y" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="4WT-oe-8gf"/>
+                <constraint firstAttribute="centerX" secondItem="Eju-eL-9XC" secondAttribute="centerX" id="Ow1-vc-IZl"/>
+                <constraint firstAttribute="centerX" secondItem="jC9-9T-J4Y" secondAttribute="centerX" id="RFP-MD-AAz"/>
+                <constraint firstAttribute="centerY" secondItem="jC9-9T-J4Y" secondAttribute="centerY" id="uCB-de-yxx"/>
+            </constraints>
+            <size key="customSize" width="92" height="86"/>
+            <connections>
+                <outlet property="cameraImageView" destination="jC9-9T-J4Y" id="RjV-EC-zJV"/>
+                <outlet property="photoImageView" destination="Eju-eL-9XC" id="ou6-dI-wfy"/>
+            </connections>
+            <point key="canvasLocation" x="241" y="323"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="camera.png" width="512" height="512"/>
+    </resources>
+</document>
