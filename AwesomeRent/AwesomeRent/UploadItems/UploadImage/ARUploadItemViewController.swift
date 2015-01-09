@@ -30,6 +30,8 @@ class ARUploadItemViewController: UIViewController, UIImagePickerControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.translucent = false
+        self.setupUploadButton()
+        
         photoCollectionView.delegate = self
         photoCollectionView.dataSource = self
         let columnHeaderViewNIB = UINib(nibName:"ARUploadItemImageCellCollectionViewCell", bundle: nil)
@@ -64,6 +66,30 @@ class ARUploadItemViewController: UIViewController, UIImagePickerControllerDeleg
         let supposeWidth = ARUploadItemImageCollectionViewConstants.kColumn * (cellWidth + ARUploadItemImageCollectionViewConstants.kCellSpacing) + ARUploadItemImageCollectionViewConstants.kCellSpacing
         println("content view supposed with:\(supposeWidth)")
         println("cell width:\(cellWidth)")
+    }
+    
+    func setupUploadButton() {
+        let uploadButton = UIBarButtonItem(title: "upload", style: .Plain, target: self, action: "onPressUploadButton:")
+        self.navigationItem.rightBarButtonItem = uploadButton
+    }
+
+    func onPressUploadButton(sender: UIBarButtonItem) {
+        if (self.photos.count > 0) {
+            let image = compressImage(self.photos[0] as UIImage)
+            ARUploadImageService.uploadImage(image)
+        }
+    }
+    
+    func compressImage(image:UIImage) -> UIImage {
+        let size = CGSizeApplyAffineTransform(image.size, CGAffineTransformMakeScale(0.1, 0.1))
+        let hasAlpha = false
+        let scale: CGFloat = 0.0 // Automatically use scale factor of main screen
+        
+        UIGraphicsBeginImageContextWithOptions(size, !hasAlpha, scale)
+        image.drawInRect(CGRect(origin: CGPointZero, size: size))
+        
+        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+        return scaledImage
     }
     
     func imagePickerController(picker: UIImagePickerController!,
