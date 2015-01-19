@@ -15,14 +15,14 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        if (ARUserManager.isUserAuthenticated()) {
+//        if (ARUserManager.isUserAuthenticated()) {
             let profileVC = ARProfileViewController(nibName: "ARProfileViewController", bundle: nil)
             let navigationVC = UINavigationController(rootViewController: profileVC)
             self.presentViewController(navigationVC, animated: true, completion: nil)
-        } else {
-            var loginVC = ARLoginViewController(nibName: "ARLoginViewController", bundle: nil)
-            self.presentViewController(loginVC, animated: true, completion: nil)
-        }
+//        } else {
+//            var loginVC = ARLoginViewController(nibName: "ARLoginViewController", bundle: nil)
+//            self.presentViewController(loginVC, animated: true, completion: nil)
+//        }
     }
 
     override func didReceiveMemoryWarning() {

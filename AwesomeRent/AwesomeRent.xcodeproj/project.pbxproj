@@ -10,6 +10,10 @@
 		FB1E143D1A3E262200DEA1AC /* ARApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1E143C1A3E262200DEA1AC /* ARApiClient.swift */; };
 		FB1E143F1A3E271300DEA1AC /* ARNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1E143E1A3E271300DEA1AC /* ARNetworkClient.swift */; };
 		FB1E14421A3EA16900DEA1AC /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1E14411A3EA16900DEA1AC /* UserRouter.swift */; };
+		FB22DDB31A6B1ACB00AFFDC9 /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB22DDB11A6B1ACB00AFFDC9 /* FloatLabelTextField.swift */; };
+		FB22DDB41A6B1ACB00AFFDC9 /* FloatLabelTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB22DDB21A6B1ACB00AFFDC9 /* FloatLabelTextView.swift */; };
+		FB22DDBB1A6CEF8C00AFFDC9 /* ARUpdateCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB22DDB91A6CEF8C00AFFDC9 /* ARUpdateCategoryViewController.swift */; };
+		FB22DDBC1A6CEF8C00AFFDC9 /* ARUpdateCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB22DDBA1A6CEF8C00AFFDC9 /* ARUpdateCategoryViewController.xib */; };
 		FB4909251A4B86D000C1AE2B /* ARSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4909231A4B86D000C1AE2B /* ARSignupViewController.swift */; };
 		FB4909261A4B86D000C1AE2B /* ARSignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB4909241A4B86D000C1AE2B /* ARSignupViewController.xib */; };
 		FB4909281A4B87DE00C1AE2B /* ARSignupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4909271A4B87DE00C1AE2B /* ARSignupService.swift */; };
@@ -115,6 +119,10 @@
 		FB1E143C1A3E262200DEA1AC /* ARApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARApiClient.swift; sourceTree = "<group>"; };
 		FB1E143E1A3E271300DEA1AC /* ARNetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARNetworkClient.swift; sourceTree = "<group>"; };
 		FB1E14411A3EA16900DEA1AC /* UserRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
+		FB22DDB11A6B1ACB00AFFDC9 /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
+		FB22DDB21A6B1ACB00AFFDC9 /* FloatLabelTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextView.swift; sourceTree = "<group>"; };
+		FB22DDB91A6CEF8C00AFFDC9 /* ARUpdateCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARUpdateCategoryViewController.swift; sourceTree = "<group>"; };
+		FB22DDBA1A6CEF8C00AFFDC9 /* ARUpdateCategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARUpdateCategoryViewController.xib; sourceTree = "<group>"; };
 		FB4909231A4B86D000C1AE2B /* ARSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARSignupViewController.swift; sourceTree = "<group>"; };
 		FB4909241A4B86D000C1AE2B /* ARSignupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARSignupViewController.xib; sourceTree = "<group>"; };
 		FB4909271A4B87DE00C1AE2B /* ARSignupService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARSignupService.swift; sourceTree = "<group>"; };
@@ -224,6 +232,24 @@
 			path = Routers;
 			sourceTree = "<group>";
 		};
+		FB22DDB01A6B1ACB00AFFDC9 /* FloatLabelFields */ = {
+			isa = PBXGroup;
+			children = (
+				FB22DDB11A6B1ACB00AFFDC9 /* FloatLabelTextField.swift */,
+				FB22DDB21A6B1ACB00AFFDC9 /* FloatLabelTextView.swift */,
+			);
+			path = FloatLabelFields;
+			sourceTree = "<group>";
+		};
+		FB22DDB71A6CEF4100AFFDC9 /* UpdateCategories */ = {
+			isa = PBXGroup;
+			children = (
+				FB22DDB91A6CEF8C00AFFDC9 /* ARUpdateCategoryViewController.swift */,
+				FB22DDBA1A6CEF8C00AFFDC9 /* ARUpdateCategoryViewController.xib */,
+			);
+			path = UpdateCategories;
+			sourceTree = "<group>";
+		};
 		FB4909221A4B86BD00C1AE2B /* Signup */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +263,7 @@
 		FB4909291A4B9BC600C1AE2B /* UploadItems */ = {
 			isa = PBXGroup;
 			children = (
+				FB22DDB71A6CEF4100AFFDC9 /* UpdateCategories */,
 				FB7072C61A5E3BB200E8CA98 /* UploadImage */,
 				FB7072BB1A5E3B8600E8CA98 /* AttributeList */,
 			);
@@ -425,6 +452,7 @@
 		FBF87EE21A5E68AF00008FFC /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				FB22DDB01A6B1ACB00AFFDC9 /* FloatLabelFields */,
 				FBF87EE31A5E68AF00008FFC /* RAReorderableLayout */,
 			);
 			path = Library;
@@ -564,6 +592,7 @@
 				FB7072CE1A5E3BB200E8CA98 /* ARUploadItemImageCellCollectionViewCell.xib in Resources */,
 				FB7072C51A5E3B8600E8CA98 /* ARUploadItemAttributeListViewController.xib in Resources */,
 				FBE43B871A5D15F5004D1C13 /* OpenSans-Italic.ttf in Resources */,
+				FB22DDBC1A6CEF8C00AFFDC9 /* ARUpdateCategoryViewController.xib in Resources */,
 				FBE43B941A5D1671004D1C13 /* collection-disclosure@2x.png in Resources */,
 				FB7072D01A5E3BB200E8CA98 /* ARUploadItemViewController.xib in Resources */,
 				FB7072D21A5E42BD00E8CA98 /* camera.png in Resources */,
@@ -589,12 +618,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB22DDBB1A6CEF8C00AFFDC9 /* ARUpdateCategoryViewController.swift in Sources */,
 				FB7072C41A5E3B8600E8CA98 /* ARUploadItemAttributeListViewController.swift in Sources */,
+				FB22DDB41A6B1ACB00AFFDC9 /* FloatLabelTextView.swift in Sources */,
 				FB7072C31A5E3B8600E8CA98 /* ARUploadItemAttributeListItemCellModel.swift in Sources */,
 				FBE43B511A5BC68E004D1C13 /* ImageRouter.swift in Sources */,
 				FBD2ED991A3D0A3900607FBC /* ViewController.swift in Sources */,
 				FBCCD9F91A46756800CCD111 /* ARProfileViewController.swift in Sources */,
 				FB7072CD1A5E3BB200E8CA98 /* ARUploadItemImageCellCollectionViewCell.swift in Sources */,
+				FB22DDB31A6B1ACB00AFFDC9 /* FloatLabelTextField.swift in Sources */,
 				FB1E143D1A3E262200DEA1AC /* ARApiClient.swift in Sources */,
 				FBD2EDBA1A3D0D0200607FBC /* ARLoginViewController.swift in Sources */,
 				FB7072D41A5E474F00E8CA98 /* ARColorUtils.swift in Sources */,

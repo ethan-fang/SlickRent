@@ -38,18 +38,22 @@ enum ARUserManager {
     }
     
     static func username() -> String {
+        return "";
         return NSUserDefaults.standardUserDefaults().valueForKey(ARUserManager.kUserName) as String
     }
 
     static func accessToken() -> String {
+        return "";
         return NSUserDefaults.standardUserDefaults().valueForKey(ARUserManager.kAccessToken) as String
     }
     
     static func password() -> String {
+        return "";
         return NSUserDefaults.standardUserDefaults().valueForKey(ARUserManager.kPassword) as String
     }
     
     static func userId() -> String {
+        return "";
         return NSUserDefaults.standardUserDefaults().valueForKey(ARUserManager.kUserId) as String
     }
 }
